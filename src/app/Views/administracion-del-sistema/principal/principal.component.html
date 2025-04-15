@@ -1,0 +1,70 @@
+
+<table mat-table [dataSource]="listaEstados" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="weight">
+    <th mat-header-cell *matHeaderCellDef> Weight </th>
+    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="symbol">
+    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<table mat-table [dataSource]="listaEstados" class="tabla-estilizada">
+
+  <!-- Columna Tipo de Sistema -->
+  <ng-container matColumnDef="tipoSistema">
+    <th mat-header-cell *matHeaderCellDef> Tipo de Sistema </th>
+    <td mat-cell *matCellDef="let estado"> {{ estado.tipoSistema }} </td>
+  </ng-container>
+
+  <!-- Columna UPA -->
+  <ng-container matColumnDef="upa">
+    <th mat-header-cell *matHeaderCellDef> UPA </th>
+    <td mat-cell *matCellDef="let estado"> {{ estado.upa }} </td>
+  </ng-container>
+
+  <!-- Columna Fecha de Asignación -->
+  <ng-container matColumnDef="fechaAsignacionEstado">
+    <th mat-header-cell *matHeaderCellDef> Fecha de Asignación </th>
+    <td mat-cell *matCellDef="let estado"> {{ estado.fechaAsignacionEstado | date:'yyyy-MM-dd' }} </td>
+  </ng-container>
+
+  <!-- Columna Acciones -->
+  <ng-container matColumnDef="acciones">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+    <td mat-cell *matCellDef="let estado">
+      <button mat-button color="primary" (click)="editarElemento(estado)">Editar</button>
+      <button mat-button color="warn" (click)="eliminarElemento(estado)">Eliminar</button>
+    </td>
+  </ng-container>
+
+  <!-- Encabezado -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+  <!-- Filas -->
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
