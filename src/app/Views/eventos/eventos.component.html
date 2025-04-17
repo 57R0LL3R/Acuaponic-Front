@@ -1,0 +1,32 @@
+<div class="evento-container">
+    <h2 class="titulo">Evento</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre Elemento</th>
+          <th>Ubicación</th>
+          <th>Nombre Atributo</th>
+          <th>Tipo Evento</th>
+          <th>Impacto</th>
+          <th>Cantidad</th>
+          <th>Medida</th>
+          <th>Comentario</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let evento of eventos">
+          <td>{{ evento.nombreElemento }}</td>
+          <td>{{ evento.ubicacion }}</td>
+          <td>{{ evento.nombreAtributo }}</td>
+          <td>{{ evento.tipoEvento }}</td>
+          <td>{{ evento.impacto }}</td>
+          <td>{{ evento.cantidad }}</td>
+          <td>{{ evento.medida }}</td>
+          <td>{{ evento.comentario }}</td>
+          <td>{{ evento.fecha }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
