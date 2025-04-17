@@ -9,6 +9,7 @@ import { MatTableModule } from '@angular/material/table';
 import { PropiedadSistemaComponent } from './Views/administracion-del-sistema/propiedad-sistema/propiedadSistema';
 import { GestionDispositivosComponent } from './Views/gestion-dispositivos/gestion-dispositivos.component';
 import { GestionElementosComponent } from './Views/gestion-elementos/gestion-elementos.component';
+import { EventosComponent } from './Views/eventos/eventos.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { GestionElementosComponent } from './Views/gestion-elementos/gestion-ele
     PropiedadSistemaComponent,
     GestionDispositivosComponent,
     GestionElementosComponent,
+    EventosComponent,
       
      ], 
   imports: [
