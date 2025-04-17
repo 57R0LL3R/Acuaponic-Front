@@ -1,0 +1,37 @@
+.evento-container {
+    margin: 40px auto;
+    max-width: 90%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  th, td {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  tbody tr:hover {
+    background-color: #e6f7ff;
+  }
+  
