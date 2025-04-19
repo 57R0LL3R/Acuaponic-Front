@@ -10,6 +10,8 @@ import { PropiedadSistemaComponent } from './Views/administracion-del-sistema/pr
 import { GestionDispositivosComponent } from './Views/gestion-dispositivos/gestion-dispositivos.component';
 import { GestionElementosComponent } from './Views/gestion-elementos/gestion-elementos.component';
 import { EventosComponent } from './Views/eventos/eventos.component';
+import { AuditoriaComponent } from './Views/auditoria/auditoria.component';
+import { MedioDeProduccionComponent } from './Views/medio-de-produccion/medio-de-produccion.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { EventosComponent } from './Views/eventos/eventos.component';
     GestionDispositivosComponent,
     GestionElementosComponent,
     EventosComponent,
+    AuditoriaComponent,
+    MedioDeProduccionComponent,
       
      ], 
   imports: [

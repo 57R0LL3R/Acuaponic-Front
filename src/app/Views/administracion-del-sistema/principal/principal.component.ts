@@ -1,20 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AdministracionSistema } from '../../../Models/AdministracionSistema';
+import { UpaService } from '../../../services/upa.service';
+import { Upa } from '../../../Models/upa.model';
 
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.component.html',
-  styleUrl: './principal.component.css'
+  styleUrls: ['./principal.component.css']
 })
-export class PrincipalComponent {
-  displayedColumns: string[] = ['tipoSistema', 'upa', 'fechaAsignacionEstado', 'acciones'];
+export class PrincipalComponent implements OnInit {
 
-  listaEstados: AdministracionSistema[] = [
-    { tipoSistema: 'Agua', upa: 'UPA-001', fechaAsignacionEstado: new Date('2024-04-01'),estado:false },
-    { tipoSistema: 'Electricidad', upa: 'UPA-002', fechaAsignacionEstado: new Date('2024-03-28') ,estado:true },
-    { tipoSistema: 'Alimentación', upa: 'UPA-003', fechaAsignacionEstado: new Date('2024-03-25') ,estado:false },
-    { tipoSistema: 'Control', upa: 'UPA-004', fechaAsignacionEstado: new Date('2024-03-30') ,estado:true }
-  ];
+  displayedColumns: string[] = ['tipoSistema', 'upa', 'fechaAsignacionEstado', 'acciones'];
+  listaEstados: any[] = []; // temporal mientras defines bien la estructura
+  upas: Upa[] = [];
+
+  constructor(private upaservice: UpaService) {}
+
+  ngOnInit(): void {
+    this.cargarUpas();
+  }
+
+  cargarUpas(): void {
+    this.upaservice.getUpas().subscribe(data => {
+      this.upas = data;
+
+      // Si quieres que listaEstados use los datos de las UPAs, haz algo como esto:
+      this.listaEstados = data.map((upa, index) => ({
+        tipoSistema: 'Sistema ' + (index + 1), // cambia esto por el sistema real si lo tienes
+        upa: upa.nombre,
+        fechaAsignacionEstado: new Date(), // por ahora fecha actual, puedes ajustarla
+        estado: false
+      }));
+    });
+  }
 
   editarElemento(elemento: any) {
     console.log('Editar:', elemento);
@@ -24,3 +42,4 @@ export class PrincipalComponent {
     this.listaEstados = this.listaEstados.filter(e => e !== elemento);
   }
 }
+

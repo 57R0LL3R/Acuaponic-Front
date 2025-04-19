@@ -1,0 +1,18 @@
+<div class="medio-container">
+    <h2 class="titulo">Medio de Produccion</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Tipo de Elemento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of medios">
+          <td>{{ item.nombre }}</td>
+          <td>{{ item.tipoElemento }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
