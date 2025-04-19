@@ -4,6 +4,8 @@ import { PropiedadSistemaComponent } from './Views/administracion-del-sistema/pr
 import { GestionDispositivosComponent } from './Views/gestion-dispositivos/gestion-dispositivos.component';
 import { GestionElementosComponent } from './Views/gestion-elementos/gestion-elementos.component';
 import { EventosComponent } from './Views/eventos/eventos.component';
+import { MedioProduccionComponent } from './Views/medio-de-produccion/medio-de-produccion.component';
+import { AuditoriaComponent } from './Views/auditoria/auditoria.component';
 
 export const routes: Routes = [
     { path: 'Administracion-del-Sistema/Principal', component: PrincipalComponent },
@@ -11,5 +13,7 @@ export const routes: Routes = [
     { path: 'gestion-dispositivos', component: GestionDispositivosComponent },
     { path: 'gestion-elementos', component: GestionElementosComponent },
     { path: 'eventos', component: EventosComponent},
+    { path: 'medio-de-componentes', component: MedioProduccionComponent},
+    { path: 'auditoria', component: AuditoriaComponent},
 
 ];
