@@ -1,5 +1,6 @@
 import { Elemento } from "./Elemento";
 import { PropiedadSistema } from "./PropiedadSistema";
+import { UnidadMedida } from "./UnidadMedida";
 
 export interface Evento{
     IdEvento:String;
@@ -10,9 +11,9 @@ export interface Evento{
     IdTipoEvento:String;
     Cantidad:number;
     FechaEvento:String;
-    IdAsignacionSistemaNavigation:asignacionSistema;
+    //IdAsignacionSistemaNavigation:asignacionSistema;
     IdAtributoSistemaNavigation:PropiedadSistema|null;
     IdElementoNavigation:Elemento;
-    IdTipoEventoNavigation:TipoEvento;
+    //IdTipoEventoNavigation:TipoEvento;
     IdUnidadMedidaNavigation:UnidadMedida;
 }
