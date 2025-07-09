@@ -1,8 +1,19 @@
+import { AsignacionMedios } from "./AsignacionMedios";
+
 export interface PropiedadSistema {
-    nombreAtributo: string;
+    IdPropiedadSistema:String;
+    IdAsignacionSistema:String;
+    IdAsignacionMedio:String;
+    IdUnidadMedida:String;
+    CantidadAtributo:number;
+    Nombre: string;
     upa: string;
-    valor: number;
+    Valor: number;
     tipoMedida: string;
     medioProduccion: string;
+    Eventos: [];
+    IdAsignacionMedioNavigation:AsignacionMedios;
+    IdAsignacionSistemaNavigation
+    IdUnidadMedidaNavigation
   }
   
