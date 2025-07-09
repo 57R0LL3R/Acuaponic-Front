@@ -11,7 +11,7 @@ import { GestionDispositivosComponent } from './Views/gestion-dispositivos/gesti
 import { GestionElementosComponent } from './Views/gestion-elementos/gestion-elementos.component';
 import { EventosComponent } from './Views/eventos/eventos.component';
 import { AuditoriaComponent } from './Views/auditoria/auditoria.component';
-import { MedioDeProduccionComponent } from './Views/medio-de-produccion/medio-de-produccion.component';
+import { MedioProduccionComponent } from './Views/medio-de-produccion/medio-de-produccion.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { MedioDeProduccionComponent } from './Views/medio-de-produccion/medio-de
     GestionElementosComponent,
     EventosComponent,
     AuditoriaComponent,
-    MedioDeProduccionComponent,
+    MedioProduccionComponent,
       
      ], 
   imports: [

@@ -1,4 +1,5 @@
 import { AsignacionMedios } from "./AsignacionMedios";
+import { UnidadMedida } from "./UnidadMedida";
 
 export interface PropiedadSistema {
     IdPropiedadSistema:String;
@@ -13,7 +14,7 @@ export interface PropiedadSistema {
     medioProduccion: string;
     Eventos: [];
     IdAsignacionMedioNavigation:AsignacionMedios;
-    IdAsignacionSistemaNavigation
-    IdUnidadMedidaNavigation
+    //IdAsignacionSistemaNavigation
+    IdUnidadMedidaNavigation:UnidadMedida
   }
   
